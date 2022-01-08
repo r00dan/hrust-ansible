@@ -1,0 +1,8 @@
+arch: amd64
+vscode_repo: deb [arch={{ arch }},arm64,armhf signed-by=/etc/apt/trusted.gpg.d/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main
+vscode_key: https://packages.microsoft.com/keys/microsoft.asc
+system_apps: 
+    - apt-transport-https
+    - ca-certificates
+    - curl
+    - gitk

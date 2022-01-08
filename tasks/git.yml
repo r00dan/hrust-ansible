@@ -1,0 +1,11 @@
+- name: Install git
+  apt:
+    name: git
+    state: present
+    update_cache: true
+
+- name: Setting up github username
+  command: git config --global user.name "{{ GITHUB_USERNAME }}"
+
+- name: Setting up github email
+  command: git config --global user.email "{{ GITHUB_EMAIL }}"

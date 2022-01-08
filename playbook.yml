@@ -1,0 +1,13 @@
+---
+- name: "HRust workflow playbook"
+  become: true
+  hosts: 127.0.0.1
+  connection: local
+  vars_files:
+    - vars/defaults.yml
+    - vars/custom.yml
+
+  tasks:
+  - import_tasks: tasks/system.yml
+  - import_tasks: tasks/git.yml
+  - import_tasks: tasks/vscode.yml
